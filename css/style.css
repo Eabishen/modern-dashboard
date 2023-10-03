@@ -640,6 +640,10 @@ table.dataTable.table-striped > tbody > tr.odd > * {
         /* flex-direction: column; */
     }
 
+    .tab.active::after{
+        bottom:0px
+    }
+
     .tab {
         min-width: 130px;
         padding: var(--xsmall);
