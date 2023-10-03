@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+        />
+
+        <link
+            href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css"
+            rel="stylesheet"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body class="">
+        <div class="grainy"></div>
+        <nav>
+            <div class="container">
+                <div class="nav-container">
+                    <div class="brand-logo">
+                        <a href="">
+                            <img
+                                src="./assets/images/logo.svg"
+                                alt="Jobaskit Logo"
+                            />
+                        </a>
+                    </div>
+                    <div class="navlinks">
+                        <ul>
+                            <li>
+                                <div>
+                                    <i class="fa-regular fa-bell"></i>
+                                    <span class="reddot"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="logoff" href="">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <section class="position-relative bgcontainer">
+                <div class="gradiant-pink" aria-hidden="true"></div>
+                <div class="gradiant-blue" aria-hidden="true"></div>
+                <div class="container position-relative">
+                    <div class="landingpage">
+                        <div class="headingcont">
+                            <h1 class="fw-bold">
+                                Hi, <span class="maincolor">Mark Xavier</span>
+                            </h1>
+                            <p class="heading-desc">Chennai Channel Partner</p>
+                        </div>
+                        <div class="cardcont">
+                            <div class="singlecard">
+                                <p>Total Due Amount</p>
+                                <p class="largeNumber">₹ 12000</p>
+                            </div>
+                            <div class="singlecard">
+                                <p>Total Job Posted</p>
+                                <p class="largeNumber">30</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabcont">
+                    <div class="container">
+                        <div class="tabwrapper">
+                            <button class="tab active">Overview</button>
+                            <button class="tab">Store Agent</button>
+                            <button class="tab">Field Agent</button>
+                            <button class="tab">Create Job</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container my-5">
+                    <div class="dash-tabs">
+                        <button class="tabsbtn active" data-tabs="dashfield">
+                            Field Agents
+                        </button>
+                        <button class="tabsbtn" data-tabs="dashstore">
+                            Store Agents
+                        </button>
+                    </div>
+                    <div id="overview">
+                        <div id="data-dashfield" class="dash-content show">
+                            <!-- <h2 class="tabhead">Field Agents</h2> -->
+                            <table
+                                class="table table-striped display"
+                                style="width: 100%"
+                            >
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Phone Number</th>
+                                        <th>Location</th>
+                                        <th>Job Posted</th>
+                                        <th>Amount Due</th>
+                                        <th>Amount Paid</th>
+                                        <th>Options</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Eabishen Mansfield</td>
+                                        <td>+915662315420</td>
+                                        <td>Chennai</td>
+                                        <td>3</td>
+                                        <td>₹4300</td>
+                                        <td>₹8000</td>
+                                        <td>
+                                            <div class="dash-options">
+                                                <div class="dash-edit">
+                                                    <button
+                                                        type="button"
+                                                        class="btn btn-primary"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal"
+                                                    >
+                                                        <i
+                                                            class="fa-solid fa-pencil"
+                                                        ></i>
+                                                    </button>
+                                                </div>
+                                                <div class="dash-delete">
+                                                    <button>
+                                                        <i
+                                                            class="fa-solid fa-trash"
+                                                        ></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Phone Number</th>
+                                        <th>Location</th>
+                                        <th>Job Posted</th>
+                                        <th>Amount Due</th>
+                                        <th>Amount Paid</th>
+                                        <th>Options</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div id="data-dashstore" class="dash-content">
+                            <!-- <h2 class="tabhead">Store Agents</h2> -->
+
+                            <table
+                                class="table table-striped display"
+                                style="width: 100%"
+                            >
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Phone Number</th>
+                                        <th>Shop Name</th>
+                                        <th>Job Posted</th>
+                                        <th>Amount Due</th>
+                                        <th>Amount Paid</th>
+                                        <th>Options</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Eabishen Mansfield</td>
+                                        <td>+915662315420</td>
+                                        <td>Macro World's Net</td>
+                                        <td>3</td>
+                                        <td>₹4300</td>
+                                        <td>₹8000</td>
+                                        <td>
+                                            <div class="dash-options">
+                                                <div class="dash-edit">
+                                                    <button
+                                                        type="button"
+                                                        class="btn btn-primary"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal"
+                                                    >
+                                                        <i
+                                                            class="fa-solid fa-pencil"
+                                                        ></i>
+                                                    </button>
+                                                </div>
+                                                <div class="dash-delete">
+                                                    <button>
+                                                        <i
+                                                            class="fa-solid fa-trash"
+                                                        ></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Phone Number</th>
+                                        <th>Shop Name</th>
+                                        <th>Job Posted</th>
+                                        <th>Amount Due</th>
+                                        <th>Amount Paid</th>
+                                        <th>Options</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="dueSection">
+                    <div class="container">
+                        <h2 class="tabhead">Due Details</h2>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="duecard">
+                                        <div class="topcontainer">
+                                            <h3>Mansfield Jeevarathinam</h3>
+                                            <a href="" class="darpink"
+                                                >Contact Now</a
+                                            >
+                                        </div>
+                                        <div class="agentdetail">
+                                            <p>Store agent - Chrompet</p>
+                                            <p>
+                                                Payment status:
+                                                <span class="darpink"
+                                                    >pending</span
+                                                >
+                                            </p>
+                                        </div>
+                                        <hr class="my-4" />
+                                        <div class="bottomcontainer">
+                                            <div>
+                                                <p class="dueamount">₹4500</p>
+                                                <p class="duelabel">
+                                                    Due Amount
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p class="dueamount">₹14500</p>
+                                                <p class="duelabel">
+                                                    Due Collected
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p class="dueamount">45</p>
+                                                <p class="duelabel">
+                                                    Job Posted
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="duecard">
+                                        <div class="topcontainer">
+                                            <h3>Mansfield Jeevarathinam</h3>
+                                            <a href="" class="darpink"
+                                                >Contact Now</a
+                                            >
+                                        </div>
+                                        <div class="agentdetail">
+                                            <p>Store agent - Chrompet</p>
+                                            <p>
+                                                Payment status:
+                                                <span class="darpink"
+                                                    >pending</span
+                                                >
+                                            </p>
+                                        </div>
+                                        <hr class="my-4" />
+                                        <div class="bottomcontainer">
+                                            <div>
+                                                <p class="dueamount">₹4500</p>
+                                                <p class="duelabel">
+                                                    Due Amount
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p class="dueamount">₹14500</p>
+                                                <p class="duelabel">
+                                                    Due Collected
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p class="dueamount">45</p>
+                                                <p class="duelabel">
+                                                    Job Posted
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="duecard">
+                                        <div class="topcontainer">
+                                            <h3>Mansfield Jeevarathinam</h3>
+                                            <a href="" class="darpink"
+                                                >Contact Now</a
+                                            >
+                                        </div>
+                                        <div class="agentdetail">
+                                            <p>Store agent - Chrompet</p>
+                                            <p>
+                                                Payment status:
+                                                <span class="darpink"
+                                                    >pending</span
+                                                >
+                                            </p>
+                                        </div>
+                                        <hr class="my-4" />
+                                        <div class="bottomcontainer">
+                                            <div>
+                                                <p class="dueamount">₹4500</p>
+                                                <p class="duelabel">
+                                                    Due Amount
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p class="dueamount">₹14500</p>
+                                                <p class="duelabel">
+                                                    Due Collected
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p class="dueamount">45</p>
+                                                <p class="duelabel">
+                                                    Job Posted
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="duecard">
+                                        <div class="topcontainer">
+                                            <h3>Mansfield Jeevarathinam</h3>
+                                            <a href="" class="darpink"
+                                                >Contact Now</a
+                                            >
+                                        </div>
+                                        <div class="agentdetail">
+                                            <p>Store agent - Chrompet</p>
+                                            <p>
+                                                Payment status:
+                                                <span class="darpink"
+                                                    >pending</span
+                                                >
+                                            </p>
+                                        </div>
+                                        <hr class="my-4" />
+                                        <div class="bottomcontainer">
+                                            <div>
+                                                <p class="dueamount">₹4500</p>
+                                                <p class="duelabel">
+                                                    Due Amount
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p class="dueamount">₹14500</p>
+                                                <p class="duelabel">
+                                                    Due Collected
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p class="dueamount">45</p>
+                                                <p class="duelabel">
+                                                    Job Posted
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="duecard">
+                                        <div class="topcontainer">
+                                            <h3>Mansfield Jeevarathinam</h3>
+                                            <a href="" class="darpink"
+                                                >Contact Now</a
+                                            >
+                                        </div>
+                                        <div class="agentdetail">
+                                            <p>Store agent - Chrompet</p>
+                                            <p>
+                                                Payment status:
+                                                <span class="darpink"
+                                                    >pending</span
+                                                >
+                                            </p>
+                                        </div>
+                                        <hr class="my-4" />
+                                        <div class="bottomcontainer">
+                                            <div>
+                                                <p class="dueamount">₹4500</p>
+                                                <p class="duelabel">
+                                                    Due Amount
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p class="dueamount">₹14500</p>
+                                                <p class="duelabel">
+                                                    Due Collected
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p class="dueamount">45</p>
+                                                <p class="duelabel">
+                                                    Job Posted
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-scrollbar"></div>
+                            </div>
+                        </div>
+                        <!-- <div class="card-containers" id="cardsec">
+                            <div class="duecard">
+                                <div class="topcontainer">
+                                    <h3>Mansfield Jeevarathinam</h3>
+                                    <a href="" class="darpink">Contact Now</a>
+                                </div>
+                                <div class="agentdetail">
+                                    <p>Store agent - Chrompet</p>
+                                    <p>
+                                        Payment status:
+                                        <span class="darpink">pending</span>
+                                    </p>
+                                </div>
+                                <hr class="my-4" />
+                                <div class="bottomcontainer">
+                                    <div>
+                                        <p class="dueamount">₹4500</p>
+                                        <p class="duelabel">Due Amount</p>
+                                    </div>
+                                    <div>
+                                        <p class="dueamount">₹14500</p>
+                                        <p class="duelabel">Due Collected</p>
+                                    </div>
+                                    <div>
+                                        <p class="dueamount">45</p>
+                                        <p class="duelabel">Job Posted</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="duecard"></div>
+                            <div class="duecard"></div>
+                            <div class="duecard"></div>
+                            <div class="duecard"></div>
+                        </div>
+                    </div> -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal for editing -->
+        <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-bottom-0">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Agents Details
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="dash-leftform">
+                            <form action="">
+                                <div class="twoinrow">
+                                    <div class="input-container">
+                                        <input
+                                            type="text"
+                                            class="checkinp"
+                                            id="agentfname"
+                                            name="agentfname"
+                                            value=""
+                                            required
+                                            aria-labelledby="label-agentfname"
+                                        />
+                                        <label
+                                            class="label"
+                                            for="agentfname"
+                                            id="label-agentfname"
+                                        >
+                                            <div class="text">
+                                                Name of the agent
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input
+                                            type="number"
+                                            class="checkinp"
+                                            id="agentphone"
+                                            name="agentphoneNum"
+                                            value=""
+                                            required
+                                            aria-labelledby="label-agentphone"
+                                        />
+                                        <label
+                                            class="label"
+                                            for="agentphone"
+                                            id="label-agentphone"
+                                        >
+                                            <div class="text">Phone Number</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="twoinrow">
+                                    <div class="input-container">
+                                        <input
+                                            type="text"
+                                            class="checkinp"
+                                            id="shopname"
+                                            name="shopname"
+                                            value=""
+                                            required
+                                            aria-labelledby="label-shopname"
+                                        />
+                                        <label
+                                            class="label"
+                                            for="shopname"
+                                            id="label-shopname"
+                                        >
+                                            <div class="text">Shop Name</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="twoinrow">
+                                    <div class="input-container">
+                                        <input
+                                            type="text"
+                                            class="checkinp"
+                                            id="location"
+                                            name="location"
+                                            value=""
+                                            required
+                                            aria-labelledby="label-location"
+                                        />
+                                        <label
+                                            class="label"
+                                            for="location"
+                                            id="label-location"
+                                        >
+                                            <div class="text">Location</div>
+                                        </label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input
+                                            type="text"
+                                            class="checkinp"
+                                            id="jobposted"
+                                            name="jobposted"
+                                            value=""
+                                            required
+                                            aria-labelledby="label-jobposted"
+                                        />
+                                        <label
+                                            class="label"
+                                            for="jobposted"
+                                            id="label-jobposted"
+                                        >
+                                            <div class="text">Job Posted</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="twoinrow">
+                                    <div class="input-container">
+                                        <input
+                                            type="number"
+                                            class="checkinp"
+                                            id="amtdue"
+                                            name="amtdueNum"
+                                            value=""
+                                            required
+                                            aria-labelledby="label-amtdue"
+                                        />
+                                        <label
+                                            class="label"
+                                            for="amtdue"
+                                            id="label-amtdue"
+                                        >
+                                            <div class="text">Amount Due</div>
+                                        </label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input
+                                            type="number"
+                                            class="checkinp"
+                                            id="amtpaid"
+                                            name="amtpaidNum"
+                                            value=""
+                                            required
+                                            aria-labelledby="label-amtpaid"
+                                        />
+                                        <label
+                                            class="label"
+                                            for="amtpaid"
+                                            id="label-amtpaid"
+                                        >
+                                            <div class="text">Amount Paid</div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <button class="buttoncust">Update</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal for editing -->
+
+        <script src="./js/index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+        <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $("table.display").DataTable({
+                    scrollX: true,
+                    responsive: true,
+                    stateSave: true,
+                });
+            });
+        </script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: "auto",
+                spaceBetween: 20,
+                freeMode: true,
+                scrollbar: {
+                    el: ".swiper-scrollbar",
+                    hide: true,
+                },
+            });
+        </script>
+    </body>
+</html>
